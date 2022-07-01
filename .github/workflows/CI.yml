@@ -32,7 +32,7 @@ jobs:
       - name: Configure and Compile
         shell: cmd
         run: |
-          call C:\dev\humble\local_setup.bat
+          call C:\dev\humble\ros2-windows\local_setup.bat
           mkdir build
           cd build
           cmake -G"Visual Studio 16 2019" -DBUILD_SHARED_LIBS:BOOL=${{ matrix.BUILD_SHARED_LIBS }} ..
