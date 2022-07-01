@@ -17,6 +17,7 @@ jobs:
   build:
     name: '[BUILD_SHARED_LIBS=${{ matrix.BUILD_SHARED_LIBS }}]'
     strategy:
+      fail-fast: false
       matrix:
         BUILD_SHARED_LIBS: [ON, OFF]
     runs-on: windows-2019
