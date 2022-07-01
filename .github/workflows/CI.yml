@@ -15,6 +15,7 @@ on:
 
 jobs:
   build:
+    name: '[BUILD_SHARED_LIBS=${{ matrix.BUILD_SHARED_LIBS }}]'
     strategy:
       matrix:
         BUILD_SHARED_LIBS: [ON, OFF]
