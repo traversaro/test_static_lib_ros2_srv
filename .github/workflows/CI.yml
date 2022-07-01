@@ -15,6 +15,9 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        BUILD_SHARED_LIBS: [ON, OFF]
     runs-on: windows-2019
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -29,7 +32,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake -G"Visual Studio 16 2019" -DBUILD_SHARED_LIBS:BOOL=OFF ..
+          cmake -G"Visual Studio 16 2019" -DBUILD_SHARED_LIBS:BOOL=${{ matrix.BUILD_SHARED_LIBS }} ..
           cmake --build . --config Release
 
 
