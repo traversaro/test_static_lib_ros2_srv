@@ -30,6 +30,7 @@ jobs:
           required-ros-distributions: humble
           
       - name: Configure and Compile
+        shell: cmd
         run: |
           call C:\dev\humble\local_setup.bat
           mkdir build
