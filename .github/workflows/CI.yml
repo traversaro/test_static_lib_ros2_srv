@@ -34,7 +34,7 @@ jobs:
         shell: cmd
         run: |
           :: Cleanup wrong python
-          rm /S /Q C:/hostedtoolcache/windows/Python/3.10.5/
+          rmdir /S /Q C:/hostedtoolcache/windows/Python/3.10.5/
           call C:\dev\humble\ros2-windows\local_setup.bat
           mkdir build
           cd build
