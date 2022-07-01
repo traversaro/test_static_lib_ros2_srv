@@ -29,7 +29,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS:BOOL=OFF ..
-          cmake --build . 
+          cmake -G"Visual Studio 16 2019" -DBUILD_SHARED_LIBS:BOOL=OFF ..
+          cmake --build . --config Release
 
 
